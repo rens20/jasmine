@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drop1</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <dv class="bg-blue-500 p-4 flex justify-center items-center">
+    <h1 class="text-4xl text-white">BRIDGET ALEXANDRA CASITAS</h1>
+    </dv>
+    <nav class="bg-blue-500 p-4 flex justify-center items-center">
+        
+        <div>
+            <a href="#" class="text-white font-bold mr-4">Home</a>
+            <a href="#" class="text-white font-bold mr-4">About Me</a>
+        </div>
+        <div class="relative">
+            <button id="dropdownButton" class="text-white font-bold mr-4">Dropdown</button>
+        <ul id="dropdownMenu" class="hidden absolute bg-blue-500 text-white py-2 px-4 mt-2 rounded shadow">
+            <li><a href="#" class="block hover:bg-blue-700 py-2 px-4">Lhoereanne Jasmine</a></li>
+            <li><a href="#" class="block hover:bg-blue-700 py-2 px-4">Personal Space</a></li>
+        </ul>
+        </div>
+    </nav>
+    
+    <div class="container mx-auto mt-8">
+        <div id="loginForm" class="max-w-md mx-auto bg-white p-8 rounded shadow-md">
+            <h2 class="text-2xl font-bold mb-4">Login</h2>
+            <form>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 font-bold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" class="border rounded w-full py-2 px-3 text-gray-700">
+                </div>
+                <div class="mb-6">
+                    <label for="password" class="block text-gray-700 font-bold mb-2">Password</label>
+                    <input type="password" id="password" name="password" class="border rounded w-full py-2 px-3 text-gray-700">
+                </div>
+                <button type="button" onclick="login()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Login</button>
+            </form>
+        </div>
+    </div>
+    <script>
+          document.getElementById('dropdownButton').addEventListener('click', function() {
+        var dropdownMenu = document.getElementById('dropdownMenu');
+        dropdownMenu.classList.toggle('hidden');
+    });
+        function login() {
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
+            const loginForm = document.getElementById('loginForm');
+
+            const isLoginSuccessful = true;
+
+            if (isLoginSuccessful) {
+        
+                loginForm.style.display = 'none';
+            } else {
+                alert("Invalid email or password!"); 
+            }
+        }
+    </script>
+</body>
+</html>
