@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .flex-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth; 
+            -webkit-overflow-scrolling: touch; 
+            scroll-snap-type: x mandatory; 
+            gap: 20px;
+        }
+        
+        .flex-item {
+            scroll-snap-align: start; 
+            flex-shrink: 0; 
+            width: 200px; 
+            height: auto;
+            gap: 15px;
+            transition: transform 0.3s;
+
+        }
+        .flex-item:hover {
+            transform: scale(1.4); 
+        }
+        .button-container {
+            position: relative;
+            top: -20px; 
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        
+        .button-container button {
+            margin: 0 5px;
+        }
+      
+    </style>
+</head>
+
+
+<body class="bg-gray-100">
+    <header class="absolute nav p-4 w-full top-0 z-10">
+        <nav class="container mx-auto flex items-center justify-between">
+        
+            <div class="hidden md:flex space-x-4 text-black items-center justify-center w-full">
+                <a href="finale.html" class="appearance-none bg-white border border-blue-500 hover:border-gray-500 px-4 py-2 pr-8 rounded leading-tight focus:outline-none focus:border-blue-500">Profile</a>
+                <a href="finale.html" class="appearance-none bg-white border border-blue-500 hover:border-gray-500 px-4 py-2 pr-8 rounded leading-tight focus:outline-none focus:border-blue-500">Home</a>
+                <div class="flex items-center justify-center space-x-4">
+                    <select id="librarySelect" class="appearance-none bg-white border border-blue-500 hover:border-gray-500 px-4 py-2 pr-8 rounded leading-tight focus:outline-none focus:border-blue-500">
+                        <option value="library">Library</option>
+                        <option value="manhwa">Manhwa</option>
+                    </select>
+                    <select id="interestSelect" class="appearance-none bg-white border border-blue-500 hover:border-gray-500 px-4 py-2 pr-8 rounded leading-tight focus:outline-none focus:border-blue-500">
+                        <option value="interest">Interest</option>
+                        <option value="artist">Artist</option>
+                        <option value="anime">Anime</option>
+                        <option value="babyMonster">BabyMonster</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="relative overflow-hidden pt-20">
+        <div class="flex-container">
+            <img src="https://scontent.fmnl9-3.fna.fbcdn.net/v/t1.15752-9/427683165_430448369338976_2463960570179662098_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeEZxlkyKWDs5uq5BR4ucz1QWkXclZQ0_BRaRdyVlDT8FANiEVWNnasDDuUVqJNZef-dy0lwWomfuUqNL01Iyg2v&_nc_ohc=6UHbBMQh4dcAX-t09PB&_nc_oc=AQmayUxF8MuYEOGpgCQoyurmQfnPWna67WKyQN7GzD6UngUQGfGD9u253k95AEYCddk&_nc_ht=scontent.fmnl9-3.fna&oh=03_AdSbGGvaDkNgoVIPEv0_Kmc7bHENlUosjegSjxx7jn1qhQ&oe=65FB024C" alt="" class="flex-item hover:opacity-75 w-64 h-auto">
+            <img src="https://scontent.fmnl9-2.fna.fbcdn.net/v/t1.15752-9/417404516_719365703650490_3853859330962157428_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeGW6BxxAyTSufHvFp69s6gs_HwAwrNcPN78fADCs1w83tqIJkzxQHy2ojZPqSW0c4mAMDqNGBAJ0LD7MufHAwV3&_nc_ohc=vq1gjlJYLeEAX9WnXWr&_nc_ht=scontent.fmnl9-2.fna&oh=03_AdTfEky7qPpB_iM5SBFaDJAMs0CPR1mo4U1eqK9V-j13pQ&oe=65FB0A39" alt="" class="flex-item hover:opacity-75 w-64 h-auto">
+            <img src="https://scontent.fmnl9-2.fna.fbcdn.net/v/t1.15752-9/422956948_409353278140907_4490560031670722619_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeH9OLzbnXEcOHbFurlshvhxV-2nh9LjQiBX7aeH0uNCIHvJKh4yqVgMtFAxmTUWHl7KPfGdhfGtVfkVoE5f7fMv&_nc_ohc=kZpPqrP59KkAX8YRZsI&_nc_ht=scontent.fmnl9-2.fna&oh=03_AdQgfUqkG5OQ-haIXH6GfZfnFvDsy5RTxTnW82-b_MCFOA&oe=65FAF074" alt="" class="flex-item hover:opacity-75 w-64 h-auto">
+            <img src="https://scontent.fmnl9-4.fna.fbcdn.net/v/t1.15752-9/422123368_1590049081533846_5503530590620361205_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeGSkN9NXzoYqx5hyHNFyJXWF4anh6brMCEXhqeHpuswIUQiW37IpLgu_OGLrFqtQWy_P2hl4XJ-cz9IxWTeX0S-&_nc_ohc=ZrIb15AirwkAX-gdSDB&_nc_ht=scontent.fmnl9-4.fna&oh=03_AdQs0F_FkQMlAmIfq5WyBj_NYRwhPz8Sljc5XdtoWH95xw&oe=65FAF94F" alt="" class="flex-item hover:opacity-75 w-64 h-auto">
+            <img src="https://scontent.fmnl9-3.fna.fbcdn.net/v/t1.15752-9/426721542_1170568387244175_6609363550479705165_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeGpIPJSv4f8J-gRiJmbbyQ7sJK6ur2lwgewkrq6vaXCB7Uan73A3XKn3b8CSsMKoYlYvp1W3tucmOQbrm4SJdmk&_nc_ohc=ulx9ra7gD0IAX81oHjp&_nc_ht=scontent.fmnl9-3.fna&oh=03_AdRWJHv7wWVCP9UIDGDDpzau-3fOWLVInbL1vtqQK_vhAw&oe=65FAECA8" alt="" class="flex-item hover:opacity-75 w-64 h-auto">
+            <img src="https://scontent.fmnl9-4.fna.fbcdn.net/v/t1.15752-9/417498097_765837308379170_1944009375653864215_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeF9TJC8WY4cNbUrzUz7ChS681epu7auzjTzV6m7tq7ONFn2SLE5JkbbQ5-XL3z4tPhfMbSQyYmmIiMih9ZzIKv3&_nc_ohc=KSFsDTlnfcsAX_GU262&_nc_oc=AQmVn8iJT9aQ5zUNAUVfA_gkId91diyJPjALntYuCO7b2t-1jlEoQrUUTh1k5maGV5M&_nc_ht=scontent.fmnl9-4.fna&oh=03_AdRnfjAr43f-z_py7rOlvC5z5yl-5fHWxBXNJwc8M3Bdgw&oe=65FB1788" alt="" class="flex-item hover:opacity-75 w-64 h-auto">
+            <img src="https://scontent.fmnl9-1.fna.fbcdn.net/v/t1.15752-9/416740588_1548224169297746_7347216067001608505_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeFp4bawOY2sZBtYLNgxH0srFpQxF1XqTzAWlDEXVepPMKGGqiYvoyi6i724G1AlPGuJa0M7lTO0x-gg3wigI6Fu&_nc_ohc=xC8m0B0s35cAX_C6OjX&_nc_ht=scontent.fmnl9-1.fna&oh=03_AdShfeqKRRloz3LM-KB_9gwX2wcyB_fn430U2YjFWEkQ7w&oe=65FB0592" alt="" class="flex-item hover:opacity-75 w-64 h-auto">
+            <img src="https://scontent.fmnl9-1.fna.fbcdn.net/v/t1.15752-9/426721463_1541789876555088_4794052561221382069_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeEd3suQiTiQvbiu2Fwcc9MIxT3qZVXpNWPFPeplVek1YzCgFV1or1qVd5WqOTs5cnNnPImMT4dLmDiuaKlQ2a4l&_nc_ohc=P9ZzLb9FN80AX8FXLwv&_nc_ht=scontent.fmnl9-1.fna&oh=03_AdRNzfJ-63bUAlLOMlpMILQBkuXhd70V30RwMID4EvlqOQ&oe=65FB032E" alt="" class="flex-item hover:opacity-75 w-64 h-auto">
+            <img src="https://scontent.fmnl9-1.fna.fbcdn.net/v/t1.15752-9/417604894_282246964705888_1093528188052442550_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeFYxpDKrsihP8ycJ7lvSkrB-OTjY0T9d3345ONjRP13fdnxA4yI8FJXHzKE5uvsKUCLTnJaoOTWxAX2AmKZTd3W&_nc_ohc=5Q-A224NtZ8AX_jmogN&_nc_ht=scontent.fmnl9-1.fna&oh=03_AdTGWh2JB0p6bl-tMkTPxoiTQFgQNHWOYcnHt48f65TgFA&oe=65FAFE5F" alt="" class="flex-item hover:opacity-75 w-64 h-auto">
+            <img src="https://scontent.fmnl9-1.fna.fbcdn.net/v/t1.15752-9/417548837_423021490288452_5261658596608819345_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeGzIaAVM34EkQzV939f0fIGeZhN4d3Xlg15mE3h3deWDRgSIuKxxjgUII6nWr1mZd8qvfpUsE8sj-mr8H7abtfn&_nc_ohc=c0uX8fc3EWAAX-pDHvA&_nc_ht=scontent.fmnl9-1.fna&oh=03_AdTMhxkRry6sMkI8bfSQcbai2Cl-EjVnrwibVoqM4WPnFA&oe=65FB1988" alt="" class="flex-item hover:opacity-75 w-64 h-auto">
+            <img src="https://scontent.fmnl9-4.fna.fbcdn.net/v/t1.15752-9/422728214_1452469408674415_791943440141700787_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeEh2LgN93XqMwvEsi2BYpckfNuWBxexRoN825YHF7FGg5e_u274z4A9RHFx375XQalvlDgTjC0KslwH1ArxfV1y&_nc_ohc=FqP-Sx6esX8AX-bfSle&_nc_ht=scontent.fmnl9-4.fna&oh=03_AdTRXI_2_HySOzLWQqgAysl9ophHEb-ivLBfXuoRYWUk0Q&oe=65FB18D9" alt="" class="flex-item hover:opacity-75 w-64 h-auto">
+            <img src="https://scontent.fmnl9-4.fna.fbcdn.net/v/t1.15752-9/417457272_1035395814198156_5876877831825292046_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeFpfZ-2ckLOyxQ0KJkv3j6Q7DlFDlMsT1HsOUUOUyxPUXBR1JI91mP3ZkF-VvOYCwors53ZdphY_BPgRXGe510g&_nc_ohc=INmchYQbWe4AX-HAsZ7&_nc_ht=scontent.fmnl9-4.fna&oh=03_AdTqbNlz0k1KqB--6rwAEfIJ1XKE0ueShMP-7OU_9uI5UQ&oe=65FAF959" alt="" class="flex-item hover:opacity-75 w-64 h-auto">
+        
+        </div>
+        <div class="relative bottom-0 flex justify-center w-full pt-10">
+            <button id="prevButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-l">
+                &lt;
+            </button>
+            <button id="nextButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r">
+                &gt;
+            </button>
+            
+            
+            
+        </div>
+    </div>
+    <script>
+const librarySelect = document.getElementById('librarySelect');
+        const interestSelect = document.getElementById('interestSelect');
+
+        librarySelect.addEventListener('change', redirectToSelectedFile);
+        interestSelect.addEventListener('change', redirectToSelectedFile);
+
+        function redirectToSelectedFile() {
+            const selectedOption = this.value;
+            switch (selectedOption) {
+                case 'home':
+                    window.location.href = 'finale.html';
+                    break;
+                case 'manhwa':
+                    window.location.href = 'Manwha.html';
+                    break;
+                case 'anime':
+                    window.location.href = 'anime.html';
+                    break;
+                case 'artist':
+                    window.location.href = 'artist.html';
+                    break;
+                case 'babyMonster':
+                    window.location.href = 'BabyMonster.html';
+                    break;
+                default:
+                    break;
+            }
+        }
+
+
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+
+        prevButton.addEventListener('click', () => {
+            document.querySelector('.flex-container').scrollBy({
+                left: -300, 
+                behavior: 'smooth'
+            });
+        });
+    
+        nextButton.addEventListener('click', () => {
+            document.querySelector('.flex-container').scrollBy({
+                left: 300,
+                behavior: 'smooth' 
+            });
+        });
+    </script>
+</body>
+</html>

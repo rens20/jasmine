@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+<style>
+  
+form{
+    animation: fadeIn 3s ease-in-out forwards;
+    border-color:2px solid  #7588FD;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+</style>
+
+<body>
+    <form class="max-w-md mx-auto p-4 border rounded-lg mt-20 shadow-md" onsubmit="login(); return false;">
+        <p class="text-center mb-4 text-lg font-semibold ">Login</p>
+        <input type="email" class="w-full px-4 py-2 mb-4 border border-blue-500 rounded-lg focus:outline-none focus:border-blue-700" placeholder="Email">
+        <div class="relative mb-4">
+            <input type="password" id="password" class="w-full px-4 py-2 pr-10 border border-blue-500 rounded-lg focus:outline-none focus:border-blue-700" placeholder="Password">
+            <button type="button" onclick="togglePasswordVisibility()" class="absolute inset-y-0 right-0 px-3 py-2 bg-gray-200 text-gray-600 hover:text-gray-700 focus:outline-none">
+                <i id="eyeIcon" class="far fa-eye text-blue-500"></i>
+            </button>
+        </div>
+        <button class="w-full px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600" type="submit">Login</button>
+    </form>
+    
+    <script>
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById('password');
+            var eyeIcon = document.getElementById('eyeIcon');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyeIcon.classList.remove('fa-eye');
+                eyeIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                eyeIcon.classList.remove('fa-eye-slash');
+                eyeIcon.classList.add('fa-eye');
+            }
+        }
+    
+        function login() {
+            const emailInput = document.querySelector('input[type="email"]');
+            const  passwordInput = document.getElementById('password');
+            
+            // Check if email and password fields are empty
+            if (emailInput.value.trim() === '' || passwordInput.value.trim() === '') {
+                swal("Error!", "Please fill in both email and password fields!", "error");
+                return; 
+            }
+            const  isLoginSuccessful = true;
+    
+            if (isLoginSuccessful) {
+                // Display SweetAlert
+                swal({
+                    title: "Success!",
+                    text: "Login successful!",
+                    icon: "success",
+                    timer: 3000, // Display alert for 3 seconds
+                 
+                });
+    
+                // Redirect to another page after 3 seconds
+                setTimeout(function() {
+                    window.location.href = "finale.html";
+                }, 3000);
+            } else {
+
+                swal("Error!", "Invalid email or password!", "error");
+            }
+        }
+    </script>
+    
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+</body>
+</html>

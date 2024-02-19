@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<style>
+    .rens{
+        border: 2px solid #7588FD;
+    
+    }
+    .security-code {
+        display: inline-block;
+        background-color: black;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 4px;
+        margin-top: 5px;
+        font-family: monospace; 
+        transform: skew(-23deg, -8deg); 
+        font-size: 36px;
+        
+    }
+</style>
+<body class=" bg-gray-100">
+    <div class="rens flex justify-center items-center min-h-screen">
+        <form class="bg-white shadow-md rounded px-8 py-8 mb-4 w-full md:w-3/4 lg:w-1/2">
+            <p class="text-center text-xl">
+                Form
+            </p>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="firstName">
+                    First Name
+                </label>
+                <input class="shadow appearance-none border border-blue-500 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="firstName" type="text" placeholder="Enter your first name">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
+                    Last Name
+                </label>
+                <input class="shadow appearance-none border border-blue-500 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="lastName" type="text" placeholder="Enter your last name">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+                    Password
+                </label>
+                <input class="shadow appearance-none border border-blue-500 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Enter your password">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2">
+                    Age
+                </label>
+                <div class="relative">
+                    <select class="block appearance-none w-full bg-white border border-blue-500 hover:border-gray-500 px-4 py-2 pr-8 rounded leading-tight focus:outline-none focus:border-blue-500" id="age">
+                        <option value="16-20">16-20 years old</option>
+                        <option value="21-24">21-24 years old</option>
+                        <option value="25+">25-30 years old</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="securityQuestion">
+                    Security Question: What is the name of your hamster?
+                </label>
+                <input class="shadow appearance-none border border-blue-500 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="securityQuestion" type="text" placeholder="Enter the name of your pet">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="securityQuestion">
+                    Security Question: What reading app do you like most?
+                </label>
+                <input class="shadow appearance-none border border-blue-500 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="securityQuestion" type="text" placeholder="Enter the name of your pet">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="securityQuestion">
+                    Security Question: What country would you like to go to?
+                </label>
+                <input class="shadow appearance-none border border-blue-500 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="securityQuestion" type="text" placeholder="Enter the name of your pet">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2 text-center" for="securityCode">
+                    Security Code
+                    <br>
+                    <span class="security-code">
+                        bs0438
+                    </span>
+                </label>
+                <input class="shadow appearance-none border border-blue-500 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="securityCode" type="text" placeholder="Enter security code">
+            </div>
+           
+            <div class="flex items-center justify-between">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

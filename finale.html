@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home || Jasmine</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<style>
+ 
+    .dropdown-content {
+      display: none;
+    }
+  </style>
+<body class="bg-gray-100">
+    <header class="absolute nav p-4 w-full top-0 z-10">
+        <nav class="container mx-auto flex items-center justify-between">
+        
+            <div class="hidden md:flex space-x-4 text-black items-center justify-center w-full">
+                <a href="finale.html" class="appearance-none bg-white border border-blue-500 hover:border-gray-500 px-4 py-2 pr-8 rounded leading-tight focus:outline-none focus:border-blue-500">Profile</a>
+                <a href="finale.html" class="appearance-none bg-white border border-blue-500 hover:border-gray-500 px-4 py-2 pr-8 rounded leading-tight focus:outline-none focus:border-blue-500">Home</a>
+                <div class="flex items-center justify-center space-x-4">
+                    <select id="librarySelect" class="appearance-none bg-white border border-blue-500 hover:border-gray-500 px-4 py-2 pr-8 rounded leading-tight focus:outline-none focus:border-blue-500">
+                        <option value="library">Library</option>
+                        <option value="manhwa">Manhwa</option>
+                    </select>
+                    <select id="interestSelect" class="appearance-none bg-white border border-blue-500 hover:border-gray-500 px-4 py-2 pr-8 rounded leading-tight focus:outline-none focus:border-blue-500">
+                        <option value="interest">Interest</option>
+                        <option value="artist">Artist</option>
+                        <option value="anime">Anime</option>
+                        <option value="babyMonster">BabyMonster</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+    </header>
+<br>
+<br>
+<br>
+    <div class="wave-container flex flex-col items-center justify-center relative overflow-hidden">
+        <div class="content text-center flex items-center justify-between z-10 relative">
+          
+            <div class="max-w-lg mx-auto p-6  bg-white shadow-md rounded-md">
+                <div class="text-left pr-8  pt-15 mt-15 relative z-1">
+                    <h4 class="name font-bold text-gray-700">Hi, I'm</h4>
+                    <h2 class="name text-4xl font-bold bg-gradient-to-r text-transparent from-blue-500 via-cyan-400 to-blue-700 bg-clip-text">Lhoreanne Jasmine</h2>
+                </div>
+                <br>
+                <p class="text-gray-800">
+                    Email: <a href="mailto:mine.asuncion1435@gmail.com" class="text-blue-500">mine.asuncion1435@gmail.com</a><br>
+                    Phone Number: <span class="text-blue-500">09192330706</span><br><br>
+                    A third-year college student at Polytechnic University of the Philippines, taking Bachelor of Science in Office Administration under Open University Program. A customer service representative at a BPO company. A person who believes in 'truck-un' and alternate universes. An ordinary girl who does not know a single sport, does not have any interesting talent, not a nerd but wears glasses, and a girl who devotes her entire free time reading manhwa, fiction novels, watching anime, and watching Kdrama.
+                </p>
+               
+            </div>
+            
+         
+            
+            <!-- Remaining Content Here -->
+            <div class="flex items-center mt-20 pt-20">
+                <img src="https://scontent.fmnl9-1.fna.fbcdn.net/v/t1.15752-9/428077164_364051926503120_864854821034245662_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHYJ4JtEJo38iI8UYaD2jaYeCk3KG1tfs14KTcobW1-zSuTed42IWpDE2nU6c9ETLaCXGDvfQa9BhnLnv9XdvEa&_nc_ohc=NV9gTR1H8O8AX_W2Bjk&_nc_ht=scontent.fmnl9-1.fna&oh=03_AdSHI1p2AFT1bFq92kQG5Y41qQBD7os3CSuM7hnccCfCgQ&oe=65FAFD11" class="max-w-xs h-auto rounded-full hidden sm:block ml-5 shadow-lg" alt="Profile">
+            </div>
+        </div>
+    </div>
+    
+
+    </div>
+    
+    <script>
+const librarySelect = document.getElementById('librarySelect');
+        const interestSelect = document.getElementById('interestSelect');
+
+        librarySelect.addEventListener('change', redirectToSelectedFile);
+        interestSelect.addEventListener('change', redirectToSelectedFile);
+
+        function redirectToSelectedFile() {
+            const selectedOption = this.value;
+            switch (selectedOption) {
+                case 'home':
+                    window.location.href = 'finale.html';
+                    break;
+                case 'manhwa':
+                    window.location.href = 'Manwha.html';
+                    break;
+                case 'anime':
+                    window.location.href = 'anime.html';
+                    break;
+                case 'artist':
+                    window.location.href = 'artist.html';
+                    break;
+                case 'babyMonster':
+                    window.location.href = 'BabyMonster.html';
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        function toggleDropdown(dropdownId) {
+const  dropdown = document.getElementById(dropdownId);
+  // Toggle the display property
+  dropdown.style.display === "none" ? dropdown.style.display = "block" : dropdown.style.display = "none";
+}
+    </script>
+</body>
+</html>
